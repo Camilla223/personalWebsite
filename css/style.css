@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+:root {
+  --main: #F3F1F5;
+  --darkgrey: #7F7C82;
+  --lilac: #F0D9FF;
+  --lavander: #BFA2DB;
+}
+
+body {
+  font-family: "DM Sans",sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.bigger-text {
+  font-size: 1.25rem;
+  font-weight: 300;
+}
+.text-justify {
+  text-align: justify !important;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.link-main {
+  text-decoration: underline;
+  color: var(--main);
+}
+
+.link-icon i {
+  color: var(--lavander);
+  font-size: 1.25rem;
+}
+
+.link-icon i:hover {
+  color: var(--darkgrey);
+}
+
+.primary-text {
+  color: var(--lavander);
+}
+
+.main-text {
+  color: var(--main);
+}
+
+.secondary-text {
+  color: var(--darkgrey);
+}
+
+.darkgrey-bg {
+  background-color: var(--darkgrey);
+}
+
+.lavander-bg {
+  background-color: var(--lavander);
+}
+
+.lilac-bg {
+  background-color: var(--lilac);
+}
+
+.main-bg {
+  background-color: var(--main);
+}
+
+.gradient-background {
+  background: linear-gradient(320deg, var(--lilac), var(--darkgrey), var(--lavander));
+  background-size: 180% 180%;
+  animation: gradient-animation 10s ease infinite;
+}
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.container-img {
+  display: flex;
+  justify-content: center;
+  padding-top: 1.5rem;
+}
+
+.profile-photo {
+  width: 200px;
+  border-radius: 50%;
+}
+
+.bg-text {
+  background-color: var(--main);
+  font-weight: bold;
+  border: 3px solid var(--darkgrey);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 67%;
+  padding: 20px;
+  text-align: center;
+}
+
+.bg-skills {
+  background-color: var(--main); /* Fallback color */
+  display: block;
+  font-weight: bold;
+  border: 3px solid var(--darkgrey);
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+}
+
+.bg-skills object {
+  height: 3.25rem;
+}
+
+/*---------------*/
+/***** Effect on hover personal projects photos *****/
+/*---------------*/
+
+figure {
+  position: relative;
+}
+
+figure img {
+  display: block;
+  min-height: 100%;
+  max-width: 100%;
+}
+
+figure figcaption {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 2em;
+  color: var(--main);
+  font-size: 1.25em;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+figure figcaption::before,
+figure figcaption::after {
+  pointer-events: none;
+}
+
+figure p {
+  margin: 0;
+  text-align: center;
+}
+
+figure p {
+  letter-spacing: 1px;
+  font-size: 68.5%;
+}
+
+figure.effect figcaption::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: -webkit-linear-gradient(
+    top,
+    rgba(72, 76, 97, 0) 0%,
+    var(--darkgrey) 80%
+  );
+  background: linear-gradient(to bottom, rgba(72, 76, 97, 0) 0%, var(--lavander) 92%,
+    var(--darkgrey));
+  content: "";
+  opacity: 0;
+}
+
+figure.effect figcaption::before,
+figure.effect p {
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+}
+
+figure.effect p {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 2em;
+  width: 100%;
+  opacity: 0;
+  -webkit-transform: translate3d(0, 10px, 0);
+  transform: translate3d(0, 10px, 0);
+}
+
+figure.effect:hover figcaption::before,
+figure.effect:hover p {
+  opacity: 1;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+
+/* Gradient About me */
+.box {
+  margin-top: 4.25rem;
+  margin-bottom: 4.25rem;
+  padding: 5% 20px; /* Added a percentage value for top/bottom padding to keep the wrapper inside of the parent */
+  background-image: linear-gradient(45deg,var(--darkgrey), var(--lavander) 30%, var(--lilac));
+  -webkit-transform: skewY(-5deg);
+  transform: skewY(-5deg);
+  background-color: var(--main);
+}
+
+.box > .wrapper {
+  -webkit-transform: skewY(5deg);
+  transform: skewY(5deg);
+  color: var(--main);
+}
+
+/* CSS rules for smaller devices */
+@media (max-width: 1200px) {
+  .bg-text {
+    top: 38%;
+    width: 90%;
+    padding: 15px 10px 10px 15px;
+  }
+
+  .bigger-text {
+    font-size: 1rem;
+    font-weight: 300;
+  }
+
+  .bg-text p {
+    margin: 0;
+  }
+
+  .profile-photo {
+    width: 120px;
+  }
+
+  .bg-skills {
+    top: 75%;
+  }
+
+  ul {
+    padding-left: 1.25rem;
+  }
+
+  .text-justify {
+    text-align: left !important;
+  }
+}
