@@ -1,14 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
 
 :root {
-  --main: #F3F1F5;
-  --darkgrey: #7F7C82;
-  --lilac: #F0D9FF;
-  --lavander: #BFA2DB;
+  --main: #f3f1f5;
+  --darkgrey: #7f7c82;
+  --lilac: #f0d9ff;
+  --lavander: #bfa2db;
 }
 
 body {
-  font-family: "DM Sans",sans-serif;
+  font-family: "DM Sans", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
@@ -69,7 +69,12 @@ a:hover {
 }
 
 .gradient-background {
-  background: linear-gradient(320deg, var(--lilac), var(--darkgrey), var(--lavander));
+  background: linear-gradient(
+    320deg,
+    var(--lilac),
+    var(--darkgrey),
+    var(--lavander)
+  );
   background-size: 180% 180%;
   animation: gradient-animation 10s ease infinite;
 }
@@ -182,8 +187,12 @@ figure.effect figcaption::before {
     rgba(72, 76, 97, 0) 0%,
     var(--darkgrey) 80%
   );
-  background: linear-gradient(to bottom, rgba(72, 76, 97, 0) 0%, var(--lavander) 92%,
-    var(--darkgrey));
+  background: linear-gradient(
+    to bottom,
+    rgba(72, 76, 97, 0) 0%,
+    var(--lavander) 70%,
+    var(--darkgrey)
+  );
   content: "";
   opacity: 0;
 }
@@ -212,13 +221,17 @@ figure.effect:hover p {
   transform: translate3d(0, 0, 0);
 }
 
-
 /* Gradient About me */
 .box {
   margin-top: 4.25rem;
   margin-bottom: 4.25rem;
   padding: 5% 20px; /* Added a percentage value for top/bottom padding to keep the wrapper inside of the parent */
-  background-image: linear-gradient(45deg,var(--darkgrey), var(--lavander) 30%, var(--lilac));
+  background-image: linear-gradient(
+    45deg,
+    var(--darkgrey),
+    var(--lavander) 30%,
+    var(--lilac)
+  );
   -webkit-transform: skewY(-5deg);
   transform: skewY(-5deg);
   background-color: var(--main);
