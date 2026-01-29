@@ -23,8 +23,8 @@
 
 
   <div class="bg-text">
-    <h1 class="display-6 display-lg-5 fw-bold primary-text lh-1 mb-lg-3 mb-1">Camilla Toso</h1>
-    <p class="bigger-text secondary-text">Hi! I am a Junior <b>Fullstack Web Developer.</b><br>I create custom web applications and responsive websites.<br>Made in Italy. Based in
+    <h1 class="display-6 display-lg-5 fw-bold lh-1 mb-lg-3 mb-1">Camilla Toso</h1>
+    <p class="bigger-text">Hi! I am a <b>Fullstack Web Developer.</b><br>I create custom web applications and responsive websites.<br>Made in Italy. Based in
       Berlin.</p>
   </div>
 
@@ -57,38 +57,33 @@
 
   <!-- Resume -->
   <section id="resume" class="min-vh-100 py-4 main-bg">
-    <div class="container py-4">
-      <div class="p-lg-5 p-3 mb-4 darkgrey-bg main-text rounded-3">
+    <div class="container py-2">
+      <h2 class="primary-text pb-2">Resume</h2>
+      <div class="p-lg-5 p-3 mb-4 purple-container top rounded-3">
         <div class="container-fluid">
           <h2>Work&nbsp;<i class="bi bi-person-workspace fs-2"></i></h2>
           <div class="row text-justify">
             <div class="col-lg-4 ">
               <h5><a href="https://dmtcycling.com/" class="link-main" target="_blank" rel="noopener noreferrer">Diamant SRL (2022-present)</a>&nbsp;<object data="./images/italy.svg" height="20"></object></h5>
               <ul>
-                <li>Developed and maintained <b>customized internal web applications</b> designed to support
-                  employees with financial activities. </li>
-                <li>Designed and optimized <b>complex queries</b> for ERP systems (SAP) to improve <b>data
-                    analysis</b> accuracy and enhance system performance.</li>
-                <li>Developed a comprehensive platform supporting multiple user roles to efficiently
-                  manage diverse activities, contributing to the company's <b>digitalization</b> efforts.
-                </li>
+                <li>Developed and maintained internal web applications for financial and logistics operations using Flask, SQLAlchemy, and PostgreSQL, deployed on Nginx with Gunicorn as the WSGI server.</li>
+                <li>Contributed to the development of a multi-role administrative platform on Microsoft Azure to manage car fleet operations, tax documentation, and company workflows; developing the frontend as a single-page application using Next.js with Redux for state management and API integration.</li>
+                <li>Increased performance and reliability of ERP (SAP) data pipelines by writing and optimizing complex SQL queries, improving analytics accuracy and reducing query execution time. </li>
               </ul>
             </div>
             <div class="col-lg-4">
               <h5><a href="https://eutechengineers.com/" class="link-main" target="_blank" rel="noopener noreferrer">Eutech engineers (2021)</a>&nbsp;<object data="./images/spain.svg" height="20"></object></h5>
               <ul>
-                <li>Contributed to an Erasmus+ Internship project within an <b>international team</b>,
-                  responsible for updating the company’s website using WordPress, improve <b>SEO</b> rankings
-                  by conducting keyword research and optimizing on-page content, editing photos with
-                  <b>Adobe Photoshop</b>.
-                </li>
+                <li>Collaborated with an international team during Erasmus+ internship.</li>
+                <li>Updated company website using WordPress, improved SEO by conducting keyword research and optimizing on-page content and edited visuals with Adobe Photoshop.</li>
               </ul>
             </div>
             <div class="col-lg-4">
               <h5><a href="https://www.newsoftware.it/" class="link-main" target="_blank" rel="noopener noreferrer">New Software sas (2018-2019)</a>&nbsp;<object data="./images/italy.svg" height="20"></object></h5>
               <ul>
-                <li>Collaborated with a team of developers to implement new features and troubleshoot bugs in a <b>business management software</b>, gaining experience in integrating <b>backend and frontend technologies.</b></li>
-                <li>Developed and managed <b>websites</b> and <b>e-commerce</b> for freelancers and companies enhancing user experience and engagement through optimized, accessible designs and rigorous A/B testing.</li>
+                <li>Collaborated on developing business management software using the LAMP stack and Laravel framework; implemented new features, debugged issues and refactored legacy code to improve performance and maintainability.</li>
+                <li>Utilized Git for version control and efficient team collaboration throughout the development process.</li>
+                <li>Build and maintained responsive websites with HTML, Bootstrap and jQuery, created CSS animations and improved accessible design for a better user experience.</li>
               </ul>
             </div>
           </div>
@@ -97,7 +92,7 @@
 
       <div class="row align-items-md-stretch">
         <div class="col-md-6 mb-4 mb-lg-0">
-          <div class="h-100 p-5 lavander-bg main-text rounded-3">
+          <div class="h-100 p-5 purple-container bottom rounded-3">
             <h3>Education&nbsp;<i class="bi bi-mortarboard-fill fs-2"></i></h3>
             <div class="row">
               <div class="col-6">
@@ -116,7 +111,7 @@
           </div>
         </div>
         <div class="col-md-6">
-          <div class="h-100 p-5 lilac-bg secondary-text border rounded-3">
+          <div class="h-100 p-5 purple-container bottom rounded-3">
             <h3>Languages&nbsp;<i class="bi bi-translate fs-2"></i></h3>
             <ul>
               <li><b>English</b>: Fluent</li>
@@ -132,11 +127,11 @@
   </section>
 
   <!-- Portfolio -->
-  <section id="portfolio" class="min-vh-100 darkgrey-bg py-5">
+  <section id="portfolio" class="min-vh-100 purple-bg py-5">
     <div class="container">
-      <h2 class="main-text pb-2">PERSONAL PROJECTS</h2>
-      <div class="row row-cols-1 row-cols-md-3 g-3 text-justify">
-        <div class="col">
+      <h2 class="pb-2">Personal projects</h2>
+      <div class="row row-cols-1 row-cols-md-3 g-3  justify-content-between text-justify">
+        <div class="col container-project">
 
           <figure class="effect">
 
@@ -147,7 +142,7 @@
             </a>
           </figure>
         </div>
-        <div class="col">
+        <div class="col container-project">
 
           <figure class="effect">
 
@@ -160,30 +155,23 @@
             </a>
           </figure>
         </div>
-        <div class="col">
+
+        <div class="col container-project">
+
           <figure class="effect">
 
-            <a href="https://camilla223.github.io/flag_of_laos/" target="_blank" rel="noopener noreferrer"><img src="./images/flag.png" />
+            <a href="https://camilla223.github.io/worldwise/" target="_blank" rel="noopener noreferrer"><img src="./images/worldwise.png" />
               <figcaption>
-                <p>Recreated the national flag of Laos using HTML and CSS, with a focus on applying CSS
-                  positioning techniques for accurate layout and design.</p>
+                <p>WorldWise is a React-based travel tracking application that allows users to keep track of cities they have visited around the world, visualize them on an interactive map, and store notes about their trips.</p>
+
               </figcaption>
             </a>
           </figure>
         </div>
       </div>
-      <div class="row row-cols-1 row-cols-md-3 g-3 text-justify mt-2">
-        <!-- <div class="col">
-          <figure class="effect">
-            <a href="https://camilla223.github.io/pizza-menu/" target="_blank" rel="noopener noreferrer"><img src="./images/fastPizza.jpg" />
-              <figcaption>
-                <p>A React app that visualizes a pizza menu showcasing key concepts like props deconstruction, conditional rendering, and component-based UI design.</p>
-              </figcaption>
-            </a>
-          </figure>
-        </div> -->
+      <div class="row row-cols-1 row-cols-md-3 g-3 text-justify justify-content-between  mt-2">
 
-        <div class="col">
+        <div class="col container-project">
           <figure class="effect">
             <a href="https://camilla223.github.io/travel-list/" target="_blank" rel="noopener noreferrer"><img src="./images/travelList.jpg" />
               <figcaption>
@@ -193,7 +181,7 @@
           </figure>
         </div>
 
-        <div class="col">
+        <div class="col container-project">
           <figure class="effect">
             <a href="https://camilla223.github.io/eat-n-split/" target="_blank" rel="noopener noreferrer"><img src="./images/eatSplit.jpg" />
               <figcaption>
@@ -203,7 +191,7 @@
           </figure>
         </div>
 
-        <div class="col">
+        <div class="col container-project">
           <figure class="effect">
             <a href="https://camilla223.github.io/usepopcorn/" target="_blank" rel="noopener noreferrer"><img src="./images/usepopcorn.jpg" />
               <figcaption>
@@ -219,7 +207,7 @@
   <!-- About me -->
 
   <div class="box ">
-    <div class="container wrapper">
+    <div class="container wrapper text-justify">
       <h2>About</h2>
       <ul>
         <li>🌈 Queer person with a strong commitment to social justice and inclusivity.</li>
@@ -244,7 +232,8 @@
       <p class="text-center secondary-text">Copyright © <script type="text/javascript">
           document.write(new Date().getFullYear());
         </script>
-        Camilla Toso</p>
+        <strong>Camilla Toso</strong>
+      </p>
     </footer>
   </div>
 

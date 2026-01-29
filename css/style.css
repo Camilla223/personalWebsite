@@ -2,9 +2,13 @@
 
 :root {
   --main: #f3f1f5;
+  --purple: #210f26;
   --darkgrey: #7f7c82;
-  --lilac: #f0d9ff;
-  --lavander: #bfa2db;
+  --blue: #7ee9f5;
+  --brown: #d97c00;
+  --transition1: #24243e;
+  --transition2: #302b63;
+  --transition3: #0f0c29;
 }
 
 body {
@@ -12,6 +16,7 @@ body {
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
+  color: var(--main);
 }
 
 .bigger-text {
@@ -32,16 +37,16 @@ a:hover {
 }
 
 .link-icon i {
-  color: var(--lavander);
+  color: var(--purple);
   font-size: 1.25rem;
 }
 
 .link-icon i:hover {
-  color: var(--darkgrey);
+  color: var(--transition2);
 }
 
 .primary-text {
-  color: var(--lavander);
+  color: var(--purple);
 }
 
 .main-text {
@@ -52,59 +57,57 @@ a:hover {
   color: var(--darkgrey);
 }
 
-.darkgrey-bg {
-  background-color: var(--darkgrey);
+.purple-container {
+  background-color: var(--purple);
+  border-width: 5px;
+  border-style: solid;
+  padding: 5px;
 }
 
-.lavander-bg {
-  background-color: var(--lavander);
+.purple-container.top {
+  border-image: linear-gradient(to top, var(--blue), var(--brown) 100%) 1;
 }
 
-.lilac-bg {
-  background-color: var(--lilac);
+.purple-container.bottom {
+  border-image: linear-gradient(to bottom, var(--blue), var(--brown) 100%) 1;
 }
 
+.purple-bg {
+  background-color: var(--purple);
+}
 .main-bg {
   background-color: var(--main);
 }
 
 .gradient-background {
+  background: #0f0c29; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to left,
+    var(--transition1),
+    var(--transition2),
+    var(--transition3)
+  ); /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(
-    320deg,
-    var(--lilac),
-    var(--darkgrey),
-    var(--lavander)
-  );
-  background-size: 180% 180%;
-  animation: gradient-animation 10s ease infinite;
-}
-@keyframes gradient-animation {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
+    to left,
+    var(--transition1),
+    var(--transition2),
+    var(--transition3)
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .container-img {
   display: flex;
   justify-content: center;
-  padding-top: 1.5rem;
+  padding-top: 3rem;
 }
 
 .profile-photo {
   width: 200px;
-  border-radius: 50%;
+  border-radius: 55%;
 }
 
 .bg-text {
-  background-color: var(--main);
   font-weight: bold;
-  border: 3px solid var(--darkgrey);
   position: absolute;
   top: 50%;
   left: 50%;
@@ -119,7 +122,7 @@ a:hover {
   background-color: var(--main); /* Fallback color */
   display: block;
   font-weight: bold;
-  border: 3px solid var(--darkgrey);
+  box-shadow: 0 0px 1em 2px var(--darkgrey);
   position: absolute;
   top: 85%;
   left: 50%;
@@ -137,6 +140,17 @@ a:hover {
 /*---------------*/
 /***** Effect on hover personal projects photos *****/
 /*---------------*/
+
+.container-project {
+  width: 25vw; /* Desired width */
+  height: 50vh; /* Desired height */
+  overflow: hidden; /* Ensures image doesn't bleed out */
+}
+
+.container-project figure {
+  height: 100%;
+  object-fit: cover;
+}
 
 figure {
   position: relative;
@@ -190,8 +204,8 @@ figure.effect figcaption::before {
   background: linear-gradient(
     to bottom,
     rgba(72, 76, 97, 0) 0%,
-    var(--lavander) 70%,
-    var(--darkgrey)
+    var(--transition1) 70%,
+    var(--transition3)
   );
   content: "";
   opacity: 0;
@@ -199,8 +213,12 @@ figure.effect figcaption::before {
 
 figure.effect figcaption::before,
 figure.effect p {
-  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-  transition: opacity 0.35s, transform 0.35s;
+  -webkit-transition:
+    opacity 0.35s,
+    -webkit-transform 0.35s;
+  transition:
+    opacity 0.35s,
+    transform 0.35s;
 }
 
 figure.effect p {
@@ -228,9 +246,9 @@ figure.effect:hover p {
   padding: 5% 20px; /* Added a percentage value for top/bottom padding to keep the wrapper inside of the parent */
   background-image: linear-gradient(
     45deg,
-    var(--darkgrey),
-    var(--lavander) 30%,
-    var(--lilac)
+    var(--transition3),
+    var(--transition2) 30%,
+    var(--main)
   );
   -webkit-transform: skewY(-5deg);
   transform: skewY(-5deg);
@@ -273,6 +291,6 @@ figure.effect:hover p {
   }
 
   .text-justify {
-    text-align: left !important;
+    text-align: center !important;
   }
 }
