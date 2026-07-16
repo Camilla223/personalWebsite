@@ -265,7 +265,7 @@ figure.effect:hover p {
 @media (max-width: 1200px) {
   .bg-text {
     top: 38%;
-    width: 90%;
+    width: 50%;
     padding: 15px 10px 10px 15px;
   }
 
